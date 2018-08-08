@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import BaseRouter from "./modules/baseRouter";
-import SvrRouter from "./modules/svrRouter";
+import ServiceRouter from "./modules/serviceRouter";
 import config from "../resources/config";
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "history",
-  routes: [].concat(BaseRouter).concat(SvrRouter)
+  routes: [].concat(ServiceRouter).concat(BaseRouter)
 });
 
 router.beforeEach((to, from, next) => {

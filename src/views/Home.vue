@@ -43,7 +43,9 @@ export default {
       spinner: "el-icon-loading",
       background: "rgba(0, 0, 0, 0.7)"
     });
-
+    //TODO
+    //无session情况下默认关闭loading蒙版
+    loading.close();
     setTimeout(() => {
       let promiseGetLoginInfo = this.$store.dispatch("base/getLoginInfo");
       // let promiseGetQueryDesign = this.$store.dispatch("base/getQueryDesign");
@@ -74,8 +76,8 @@ export default {
           loading.close();
         })
         .catch(e => {
-          loading.close();
-          this.$router.replace("/login");
+          //  loading.close();
+          // this.$router.replace("/login");
         });
     }, 200);
   }

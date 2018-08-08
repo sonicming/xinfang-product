@@ -7,88 +7,47 @@ export default [
     path: "/",
     hidden: true,
     title: "Home",
+    name:"首页",
     component: Home,
     children: [
       {
         path: "/",
-        name: "Home",
+        name: "首页",
         component: () => import("@/views/Main.vue")
       },
       {
         path: "setting",
-        name: "Setting",
+        name: "设置",
         component: () => import("@/views/module/base/sysm/Setting.vue")
       }
-      // {
-      //   path: "query-:name",
-      //   name: "Query",
-      //   component: () => import("@/views/module/base/sysm/Query.vue")
-      // }
     ]
   },
   {
     path: "/sysm",
     hidden: false,
-    title: "系统管理",
+    title: "System",
+    name:"系统管理",
     component: Home,
     children: [
       {
         path: "UserMgr",
-        name: "UserMgr",
+        name: "用户信息管理",
         component: () => import("@/views/module/base/usrm/UserMgr.vue")
       },
       {
         path: "RoleMgr",
-        name: "RoleMgr",
+        name: "角色管理",
         component: () => import("@/views/module/base/usrm/RoleMgr.vue")
       },
       {
         path: "OrgMgr",
-        name: "OrgMgr",
+        name: "所属机构管理",
         component: () => import("@/views/module/base/usrm/OrgMgr.vue")
       },
       {
         path: "PermMgr",
-        name: "PermMgr",
+        name: "代码表定制(高级)",
         component: () => import("@/views/module/base/usrm/PermMgr.vue")
-      },
-      {
-        path: "CodeMgr",
-        name: "CodeMgr",
-        component: () => import("@/views/module/base/sysm/CodeMgr.vue")
-      },
-      {
-        path: "ParaMgr",
-        name: "ParaMgr",
-        component: () => import("@/views/module/base/sysm/ParaMgr.vue")
-      }
-      // {
-      //   path: "QueryMgr",
-      //   name: "QueryMgr",
-      //   component: () => import("@/views/module/base/sysm/QueryMgr.vue")
-      // }
-    ]
-  },
-  {
-    path: "/logs",
-    hidden: false,
-    title: "日志管理",
-    component: Home,
-    children: [
-      {
-        path: "LogsOper",
-        name: "LogsOper",
-        component: () => import("@/views/module/base/logs/LogsOper.vue")
-      },
-      {
-        path: "LogsServ",
-        name: "LogsServ",
-        component: () => import("@/views/module/base/logs/LogsServ.vue")
-      },
-      {
-        path: "LogsSign",
-        name: "LogsSign",
-        component: () => import("@/views/module/base/logs/LogsSign.vue")
       }
     ]
   },

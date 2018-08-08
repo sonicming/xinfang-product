@@ -1,14 +1,14 @@
 <template>
   <div>
-    <el-aside class="app-aside" :width="$store.state.base.asideCollapsed?'auto':'240px'">
-      <el-menu :collapse-transition="false" :router=" true" :collapse="$store.state.base.asideCollapsed" :default-active="$route.path" unique-opened>
+    <el-aside class="app-aside" :width="$store.state.asideCollapsed?'auto':'240px'">
+      <el-menu :collapse-transition="false" :router=" false" :collapse="$store.state.asideCollapsed" :default-active="$route.path" unique-opened>
         <template>
-          <el-submenu v-for="(item,index) in  $router.options.routes" :key="item.uuid " v-if="item.children&&item.children.length>0" :index="index+''">
+          <el-submenu v-for="(item,index) in $store.state.sysMenus" :key="item.uuid " v-if="item.children&&item.children.length>0" :index="index+''">
             <template slot="title">
               <i :class="'el-icon-fa-'+item.iconUrl"></i>
               <span>{{item.name}}</span>
             </template>
-            <el-menu-item v-for="(child) in item.children" :index="child.funcUrl" :key="child.permCode">
+            <el-menu-item v-for="(child) in item.children" @click="hanleSelectMenu(child)" :index="child.funcUrl" :key="child.permCode">
               <i :class="'el-icon-fa-'+child.iconUrl"></i>
               <span>{{child.name}}</span>
             </el-menu-item>
@@ -33,6 +33,7 @@
 export default {
   data() {
     return {
+      isCollapsed: false,
       versionInfo: {
         title: "版本信息",
         placement: "left-end",
@@ -44,6 +45,17 @@ export default {
         ver: "© 2018 ETONG.com 版权所有"
       }
     };
+  },
+  methods: {
+    /**
+     * 点击菜单处理
+     */
+    hanleSelectMenu(perm) {
+      let tabName = perm.permCode;
+      let tabLabel = perm.permName;
+      let tabUrl = perm.funcUrl;
+      this.$store.dispatch("openTab", { tabName, tabLabel, tabUrl });
+    }
   }
 };
 </script>
