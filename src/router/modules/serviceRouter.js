@@ -5,18 +5,20 @@ export default [
     path: "/shiXiangDengJi", // 第一层路由用来作为模块切换按钮使用
     iconCls: "fa fa-file-text fa-fw",
     component: Home, // 路由引用的组件实际上的意思就是，在该连接中渲染的内容为引用组件+他的父层组件内容
-    name:"事项登记",
+    name: "事项登记",
     children: [
       {
         path: "/laiXinDengJi",
         name: "来信登记",
-        component: () => import("@/views/module/shiXiangDengJi/LaiXinDengJi.vue")
+        component: () =>
+          import("@/views/module/shiXiangDengJi/LaiXinDengJi.vue")
       },
       {
         path: "/laiFangDengJi",
         name: "来访登记",
-        component: () => import("@/views/module/shiXiangDengJi/LaiFangDengJi.vue")
-       }
+        component: () =>
+          import("@/views/module/shiXiangDengJi/LaiFangDengJi.vue")
+      }
     ]
   },
   {

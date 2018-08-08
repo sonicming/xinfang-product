@@ -14,10 +14,8 @@
       </el-dropdown-menu>
     </el-dropdown>
     <div class="app-main" style='height: calc(100% - 28px);margin-top: 28px;z-index: 999;'>
-     <keep-alive :include='keepRouters'>
-         <transition name="fade" mode="out-in">
+      <keep-alive :include='keepRouters'>
         <router-view></router-view>
-          </transition>
       </keep-alive>
     </div>
   </el-container>
