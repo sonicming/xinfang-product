@@ -1,7 +1,7 @@
 <template>
   <el-container id="app-container" direction="vertical">
     <el-tabs class='hidcon' v-model="tabPagesName.curr" type="card" @tab-remove="removeTab" @tab-click="clickTab">
-      <el-tab-pane v-for="item in tabPagesName.data" :key="item.path" :label="item.path.indexOf('/query')>-1?formatQueryCode(item.name):$t('router.'+item.name)" :name="item.path" :closable='item.path!=="/"'></el-tab-pane>
+      <el-tab-pane v-for="item in tabPagesName.data" :key="item.path" :label="item.path.indexOf('/query')>-1?formatQueryCode(item.name):item.name" :name="item.path" :closable='item.path!=="/"'></el-tab-pane>
     </el-tabs>
     <el-dropdown size="mini" trigger="click">
       <el-button>
@@ -14,8 +14,10 @@
       </el-dropdown-menu>
     </el-dropdown>
     <div class="app-main" style='height: calc(100% - 28px);margin-top: 28px;z-index: 999;'>
-      <keep-alive :include='keepRouters'>
+     <keep-alive :include='keepRouters'>
+         <transition name="fade" mode="out-in">
         <router-view></router-view>
+          </transition>
       </keep-alive>
     </div>
   </el-container>

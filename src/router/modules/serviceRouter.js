@@ -5,49 +5,47 @@ export default [
     path: "/shiXiangDengJi", // 第一层路由用来作为模块切换按钮使用
     iconCls: "fa fa-file-text fa-fw",
     component: Home, // 路由引用的组件实际上的意思就是，在该连接中渲染的内容为引用组件+他的父层组件内容
-    title: "shiXiangDengJi",
-    name: "事项登记",
+    name:"事项登记",
     children: [
       {
-        path: "laiXinDengJi",
-        name: "来信登记"
-        //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
+        path: "/laiXinDengJi",
+        name: "来信登记",
+        component: () => import("@/views/module/shiXiangDengJi/LaiXinDengJi.vue")
       },
       {
-        path: "laiFangDengJi",
-        name: "来访登记"
-        //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
-      }
+        path: "/laiFangDengJi",
+        name: "来访登记",
+        component: () => import("@/views/module/shiXiangDengJi/LaiFangDengJi.vue")
+       }
     ]
   },
   {
     path: "/shiXiangDaiBan",
     iconCls: "fa fa-clock-o fa-fw",
     component: Home,
-    title: "shiXiangDaiBan",
     name: "事项待办",
     children: [
       {
-        path: "geRenDaiBan",
+        path: "/geRenDaiBan",
         name: "个人待办"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "buMenDaiBan",
+        path: "/buMenDaiBan",
         name: "部门待办"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       }
     ]
   },
   {
-    path: "/duBanLiXiang",
+    path: "/duChaDuBan",
     iconCls: "fa fa-eye fa-fw",
     component: Home,
-    title: "duBanLiXiang",
-    name: "督办立项",
+    title: "duChaDuBan",
+    name: "督查督办",
     children: [
       {
-        path: "duBanLiXiang",
+        path: "/duBanLiXiang",
         name: "督办立项"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       }
@@ -60,32 +58,32 @@ export default [
     name: "查询统计",
     children: [
       {
-        path: "gongGongShouCang",
+        path: "/gongGongShouCang",
         name: "公共收藏"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "buMenShouCang",
+        path: "/buMenShouCang",
         name: "部门收藏"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "geRenShouCang",
+        path: "/geRenShouCang",
         name: "个人收藏"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "xinFangJianChaXun",
+        path: "/xinFangJianChaXun",
         name: "信访件查询"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "xinFangRenChaXun",
+        path: "/xinFangRenChaXun",
         name: "信访人查询"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "tongJiFenXiLingDaoJueCe",
+        path: "/tongJiFenXiLingDaoJueCe",
         name: "统计分析领导决策"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       }
@@ -93,48 +91,47 @@ export default [
   },
   {
     path: "/zongHeGuanLi",
-    redirect: "/zongHeGuanLi/zongHeGuanLiMain/table",
     iconCls: "fa fa-server fa-fw",
     //component: Main,
     name: "综合管理",
     children: [
       {
-        path: "shenFenZhengBuQuan",
+        path: "/shenFenZhengBuQuan",
         name: "身份证补全登记"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "duanXinJiLu",
+        path: "/duanXinJiLu",
         name: "短信记录查询"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "duanXinMoBan",
+        path: "/duanXinMoBan",
         name: "短信模板管理"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "zhanNeiXinShouJianXiang",
+        path: "/zhanNeiXinShouJianXiang",
         name: "站内信收件箱管理"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "gongZuoWeiTuo",
+        path: "/gongZuoWeiTuo",
         name: "工作委托"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "chuangKouXinXi",
+        path: "/chuangKouXinXi",
         name: "窗口信息管理"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "wenShuChaXun",
+        path: "/wenShuChaXun",
         name: "文书查询"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       },
       {
-        path: "wenShuGuanLi",
+        path: "/wenShuGuanLi",
         name: "文书管理"
         //component: ShiXiangDengJiMain, // 进入第一层后调用的模块内主页面，可以再模块内继续添加第二层路由
       }

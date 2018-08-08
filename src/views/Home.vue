@@ -24,7 +24,6 @@ import Aside from "@/views/module/layout/Aside";
 import Header from "@/views/module/layout/Header";
 import config from "../resources/config";
 import CacheService from "../service/module/CacheService";
-import t from "@/views/module/base/sysm/Query.vue";
 import Home from "@/views/Home.vue";
 
 export default {

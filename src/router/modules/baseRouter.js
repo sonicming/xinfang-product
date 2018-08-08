@@ -7,7 +7,6 @@ export default [
     path: "/",
     hidden: true,
     title: "Home",
-    name:"首页",
     component: Home,
     children: [
       {
@@ -16,38 +15,34 @@ export default [
         component: () => import("@/views/Main.vue")
       },
       {
-        path: "setting",
+        path: "/setting",
         name: "设置",
         component: () => import("@/views/module/base/sysm/Setting.vue")
       }
     ]
   },
   {
-    path: "/sysm",
+    path: "/System",
     hidden: false,
     title: "System",
-    name:"系统管理",
     component: Home,
+    name:"系统管理",
     children: [
       {
-        path: "UserMgr",
-        name: "用户信息管理",
-        component: () => import("@/views/module/base/usrm/UserMgr.vue")
+        path: "/User",
+        name: "用户信息管理"
       },
       {
-        path: "RoleMgr",
-        name: "角色管理",
-        component: () => import("@/views/module/base/usrm/RoleMgr.vue")
+        path: "/Role",
+        name: "角色权限管理"
       },
       {
-        path: "OrgMgr",
-        name: "所属机构管理",
-        component: () => import("@/views/module/base/usrm/OrgMgr.vue")
+        path: "/Organization",
+        name: "所属机构管理"
       },
       {
-        path: "PermMgr",
-        name: "代码表定制(高级)",
-        component: () => import("@/views/module/base/usrm/PermMgr.vue")
+        path: "/CodeTable",
+        name: "代码表定制"
       }
     ]
   },
