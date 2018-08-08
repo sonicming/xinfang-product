@@ -6,13 +6,13 @@ body {
   width: 100%;
   font-size: $--size-base;
   outline: none;
-  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
-    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
 input {
-  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
-    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
 pre {
@@ -45,8 +45,8 @@ fieldset {
 
 /*---滚动条大小--*/
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0px;
+  height: 0px;
 }
 
 /*---滚动框背景样式--*/

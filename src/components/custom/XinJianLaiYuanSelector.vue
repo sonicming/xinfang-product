@@ -1,8 +1,8 @@
 <template>
-    <el-select v-model="value" filterable placeholder="请选择信件来源">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-        </el-option>
-    </el-select>
+  <el-select v-model="value" filterable placeholder="请选择或搜索信件来源">
+    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+    </el-option>
+  </el-select>
 </template>
 
 <script>
@@ -38,10 +38,6 @@ export default {
         {
           value: "7",
           label: "其他部门"
-        },
-        {
-          value: "选项5",
-          label: "电子邮箱"
         }
       ],
       value: ""
