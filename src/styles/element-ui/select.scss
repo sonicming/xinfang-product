@@ -1,0 +1,7 @@
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/common/var";
+@include b(select) {
+  @include m(compact) {
+    width: 100%;
+  }
+}

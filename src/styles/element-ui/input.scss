@@ -1,0 +1,36 @@
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/common/var";
+
+@include b(input) {
+  @include m(compact) {
+    .el-input-group__append,
+    .el-input-group__prepend {
+      padding: 0 6px;
+    }
+
+    @include e(inner) {
+      height: $line-height;
+      line-height: $line-height;
+      font-size: $--size-base;
+      padding: 0 6px;
+      width: 100%;
+      background: $input-background;
+    }
+    @include e(suffix) {
+      top: 1px;
+    }
+    .el-input__icon {
+      line-height: $line-height;
+    }
+
+    &.el-textarea {
+      vertical-align: top;
+    }
+    .el-textarea__inner {
+      padding: 0 6px;
+      font-size: $--size-base;
+      border: 1px solid #ecf0f4;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../node_modules/element-theme-chalk/src/mixins/mixins";
+@import "../../../node_modules/element-theme-chalk/src/common/var";
+
+
+
+@include b(form-item) {
+  @include m(compact) {
+    @include b(radio-group) {
+      height: $line-height ;
+      line-height: $line-height ;
+      font-size: $--size-base;
+      box-sizing: border-box;
+      padding:0 $margin;
+      width: 100%;
+    }
+  }
+}

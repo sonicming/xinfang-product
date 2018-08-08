@@ -1,0 +1,23 @@
+@import '~element-ui/packages/theme-chalk/src/mixins/mixins';
+@import '~element-ui/packages/theme-chalk/src/common/var';
+
+@include b(tabs) {
+  &__nav-next,
+  &__nav-prev {
+    line-height: $header-height;
+    height: $header-height;
+    width: 16px;
+    text-align: center;
+  }
+
+  @include e(item) {
+    line-height: $header-height;
+    height: $header-height;
+    font-size: $--size-base;
+  }
+  @include m(border-card) {
+    > .el-tabs__content {
+      padding: $margin;
+    }
+  }
+}

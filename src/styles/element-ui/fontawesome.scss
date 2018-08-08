@@ -1,0 +1,37 @@
+[class^="el-icon-fa"],
+[class*="el-icon-fa"] {
+    display: inline-block;
+    font: normal normal normal  $--size-base FontAwesome!important;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width:  $--size-base;
+}
+
+$fa-font-path: "~font-awesome/fonts" !default;
+$fa-css-prefix: el-icon-fa !default;
+//  -------------------------
+.#{$fa-css-prefix}-lg {
+    font-size: (4em / 3);
+    line-height: (3em / 4);
+    vertical-align: -15%;
+}
+
+.#{$fa-css-prefix}-2x:before {
+    font-size: 2em;
+}
+
+.#{$fa-css-prefix}-3x:before {
+    font-size: 3em;
+}
+
+.#{$fa-css-prefix}-4x:before {
+    font-size: 4em;
+}
+
+.#{$fa-css-prefix}-5x:before {
+    font-size: 5em;
+}
+
+@import "~font-awesome/scss/font-awesome.scss"; //  Icon Sizes

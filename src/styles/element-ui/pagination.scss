@@ -1,0 +1,9 @@
+@include b(pagination) {
+  @include utils-clearfix;
+
+  span:not([class*='suffix']),
+  button {
+    display: inline-block;
+    font-size: $--size-base;
+  }
+}

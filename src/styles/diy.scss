@@ -1,0 +1,590 @@
+//-------------------------2018-7-5日前样式表开始-------------------------------
+.app-container {
+  width: 100%;
+  height: 100%;
+
+  /*主面板切换动画 */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.1s ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+  .el-aside {
+    overflow: visible;
+    z-index: 300;
+    background-color: #324157;
+    position: relative;
+    & > .el-menu {
+      width: 100%;
+      border-right: 0;
+      & > .el-submenu {
+        & > .el-submenu__title {
+          height: 36px;
+          line-height: 36px;
+          font-size: 12px;
+          background-color: #324157;
+          border-bottom: 1px inset #1e2a36;
+          color: #bfcbd9;
+          & > i {
+            color: #bfcbd9;
+            font-size: 16px;
+          }
+        }
+        & > .el-menu {
+          background-color: #1e2a36;
+        }
+      }
+      & .el-menu-item {
+        height: 32px;
+        line-height: 32px;
+        font-size: 12px;
+        min-width: 180px;
+        background-color: #1f2d3d;
+        color: #bfcbd9;
+        &.is-active {
+          background-color: #1f2d3d;
+          color: #20a0ff;
+        }
+        &:hover {
+          background-color: #1f6cce;
+        }
+      }
+    }
+  }
+}
+
+.app-main {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  /* background-color: #eef2f5; */
+  position: relative;
+  box-sizing: border-box;
+  & > div {
+    flex: 1;
+  }
+}
+
+.tabs {
+  background-color: #c2ced4;
+  &__title {
+    transition: margin 0.3s;
+  }
+
+  &__action {
+    margin-left: 3px;
+    &:hover {
+      cursor: pointer;
+      color: #577c99;
+    }
+  }
+  &__item {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 9px;
+    display: inline-block;
+    border-right: 1px solid #efefef;
+    background-color: #c2ced4;
+    &:hover {
+      cursor: pointer;
+      color: #1f6cce;
+    }
+    &.active {
+      height: 30px;
+      box-shadow: none;
+      background: #eef2f5;
+    }
+  }
+}
+
+.app-top {
+  padding: 0 5px;
+  background-color: #24303b;
+  height: 42px !important;
+  line-height: 42px !important;
+  .select-lang .el-input__inner {
+    color: #fff;
+    text-align: center;
+    background-color: transparent !important;
+  }
+
+  .el-input__inner {
+    border: none;
+    background: transparent;
+  }
+}
+.el-dialog__headerbtn .el-dialog__close {
+  color: #fff;
+}
+.el-menu-item i {
+  color: #bfcbd9;
+}
+.el-card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04) !important;
+  border-radius: 4px !important;
+  width: auto !important;
+  border-color: #eee;
+}
+.el-checkbox__input.is-disabled + span.el-checkbox__label {
+  color: #4e5156;
+}
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner {
+  background-color: #6f747b;
+}
+.el-tabs__item {
+  box-shadow: none !important;
+}
+//-------------------------2018-7-5日前样式表结束-------------------------------
+//头部
+$layout-head-bg: #ffffff;
+$layout-head-height: 50px !important;
+$layout-head-font-size: 14px;
+$layout-head-font-color: #343434;
+//--------------------Light------------------------------
+// //侧导航栏表层
+// $layout-menu-bg: #ffffff;
+// $layout-menu-font-size: 14px;
+// $layout-menu-height: 50px;
+// $layout-menu-font-color: #495060;
+// $layout-menu-hover-font-color: #495060;
+// $layout-menu-hover-bg: #f0f0f0;
+// //侧导航栏底层
+// $layout-menu-item-bg: #fff;
+// $layout-menu-item-height: 50px;
+// $layout-menu-item-font-color: #495060;
+// $layout-menu-item-font-size: 14px;
+// $layout-menu-item-hover-bg: #f0f0f0;
+// $layout-menu-item-hover-font-color: #495060;
+// $layout-menu-item-active-font-color: #2d8cf0;
+// $layout-menu-item-active-bg:#fff
+//--------------------Light------------------------------
+//--------------------Dark------------------------------
+//侧导航栏表层
+$layout-menu-bg: #495060;
+$layout-menu-font-size: 14px;
+$layout-menu-height: 50px;
+$layout-menu-font-color: hsla(0, 0%, 100%, 0.702);
+$layout-menu-hover-font-color: #fff;
+$layout-menu-hover-bg: #495060;
+//侧导航栏底层
+$layout-menu-item-bg: #363e4f;
+$layout-menu-item-height: 50px;
+$layout-menu-item-font-color: rgba(255, 255, 255, 0.702);
+$layout-menu-item-font-size: 14px;
+$layout-menu-item-hover-bg: #363e4f;
+$layout-menu-item-hover-font-color: #fff;
+$layout-menu-item-active-font-color: #fff;
+$layout-menu-item-active-bg: #2d8cf0;
+//--------------------Dark------------------------------
+//内容显示窗口
+$layout-main-bg: #eef2f5;
+//el-card
+$layout-card-head-height: 30px;
+$layout-card-head-padding: 0px 10px;
+$layout-card-head-bg: #397ee5;
+$layout-card-head-font-color: #fff;
+$layout-card-head-font-size: 14px;
+//input
+$layout-input-bg: #fff;
+$layout-input-lable-top-bg: #ecf0f4;
+//table
+$layout-table-radius: 4px;
+$layout-table-title-height: 30px;
+$layout-table-title-padding: 0px 10px;
+$layout-table-title-bg: #f6f7fb;
+$layout-table-title-font-color: #393939;
+$layout-table-title-font-size: 13px;
+$layout-table-head-bg: #f6f7fb;
+$layout-table-head-font-size: 12px;
+
+.app-top {
+  height: $layout-head-height;
+  line-height: $layout-head-height;
+  background-color: $layout-head-bg;
+  box-shadow: 0px 2px 10px hsla(0, 0%, 0%, 0.2);
+  z-index: 999;
+  & img {
+    height: $layout-head-height;
+    width: 273px;
+  }
+  & .select-lang .el-input__inner,
+  & .el-input__suffix,
+  & .el-select__caret,
+  & .el-button--text {
+    color: $layout-head-font-color;
+    font-size: $layout-head-font-size;
+  }
+}
+
+.app-container .el-aside {
+  background-color: $layout-menu-bg;
+  height: calc(100vh - 100px);
+  border-right: 1px solid #eee;
+  box-shadow: 0px 2px 10px hsla(0, 0%, 0%, 0.2);
+  overflow-y: auto;
+  & > .el-menu > .el-submenu > .el-submenu__title {
+    background-color: $layout-menu-bg;
+    border-bottom: none;
+    font-size: $layout-menu-font-size;
+    height: $layout-menu-height;
+    line-height: $layout-menu-height;
+    color: $layout-menu-font-color;
+    & i {
+      color: $layout-menu-font-color;
+      font-size: $layout-menu-font-size;
+    }
+    &:hover {
+      background-color: $layout-menu-hover-bg;
+      color: $layout-menu-hover-font-color;
+      & i {
+        color: $layout-menu-hover-font-color;
+      }
+    }
+  }
+  & .el-menu .el-menu-item {
+    height: $layout-menu-item-height;
+    line-height: $layout-menu-item-height;
+    font-size: $layout-menu-item-font-size;
+    background-color: $layout-menu-item-bg;
+    color: $layout-menu-item-font-color;
+    & i {
+      color: $layout-menu-item-font-color;
+      font-size: $layout-menu-item-font-size;
+    }
+    &:hover {
+      background-color: $layout-menu-item-hover-bg;
+      color: $layout-menu-item-hover-font-color;
+      & i {
+        color: $layout-menu-item-hover-font-color;
+      }
+    }
+  }
+  & .el-menu .el-menu-item.is-active {
+    background: $layout-menu-item-active-bg;
+    color: $layout-menu-item-active-font-color;
+    border-right: 3px solid $layout-menu-item-active-font-color;
+    & i {
+      color: $layout-menu-item-active-font-color;
+    }
+  }
+}
+
+.app-main {
+  // border: none;
+  border-right: 1px solid #e4e7ed;
+  border-bottom: 1px solid #e4e7ed;
+  border-left: 1px solid #e4e7ed;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 5px;
+  & .el-card {
+    border: none;
+    position: relative;
+    box-shadow: none !important;
+    & .el-input--compact .el-input__inner,
+    & .el-range-editor--compact.el-input__inner,
+    & .el-range-editor--compact .el-range-input {
+      background-color: $layout-input-bg;
+    }
+    & .el-form-item--compact .el-radio-group {
+      background-color: $layout-input-bg;
+      border: 1px solid $layout-input-lable-top-bg;
+      border-radius: 6px;
+    }
+    & .el-form--label-top .el-form-item {
+      background-color: $layout-input-lable-top-bg;
+      & .el-input__inner {
+        border-color: $layout-input-lable-top-bg;
+      }
+      & .el-form-item__label {
+        margin-left: 4px;
+      }
+    }
+    & .el-card__header {
+      position: relative;
+      height: $layout-card-head-height;
+      line-height: ($layout-card-head-height)-2px !important;
+      padding: $layout-card-head-padding;
+      background-color: $layout-card-head-bg;
+      color: $layout-card-head-font-color;
+      font-size: $layout-card-head-font-size;
+    }
+    & .el-card__body {
+      // position: absolute;
+      top: $layout-card-head-height;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      overflow: auto;
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 12px 0 #0000001a;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  & .el-table--border {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+  }
+  & .el-table--compact thead th {
+    background: #f6f7fb;
+  }
+  & .eport-table-wrap {
+    border: none;
+    border-radius: $layout-table-radius;
+    & .table-header {
+      height: $layout-table-title-height;
+      line-height: $layout-table-title-height;
+      padding: $layout-table-title-padding;
+      border-radius: $layout-table-radius $layout-table-radius 0 0;
+      background-color: $layout-table-title-bg;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      color: $layout-table-title-font-color;
+      font-size: $layout-table-title-font-size;
+    }
+    & .has-gutter tr th {
+      font-weight: normal;
+      background-color: $layout-table-head-bg;
+      font-size: $layout-table-head-font-size;
+    }
+    & .table-footer {
+      border-bottom-left-radius: $layout-table-radius;
+      border-bottom-right-radius: $layout-table-radius;
+    }
+  }
+}
+
+.el-dialog {
+  border-radius: $layout-table-radius;
+  & .el-input--compact .el-input__inner,
+  & .el-range-editor--compact.el-input__inner,
+  & .el-range-editor--compact .el-range-input {
+    background-color: $layout-input-bg;
+  }
+  & .el-form-item--compact .el-radio-group {
+    background-color: $layout-input-bg;
+    border: 1px solid $layout-input-lable-top-bg;
+    border-radius: 6px;
+  }
+  & .el-dialog__header {
+    height: $layout-card-head-height;
+    line-height: $layout-card-head-height;
+    padding: $layout-card-head-padding;
+    background-color: $layout-card-head-bg;
+    color: $layout-card-head-font-color;
+    font-size: $layout-card-head-font-size;
+    & .el-dialog__headerbtn {
+      top: ($layout-card-head-height/2)-10px;
+      right: ($layout-card-head-height/2)-10px;
+    }
+  }
+  & .el-dialog__body {
+    border-bottom-left-radius: $layout-table-radius;
+    border-bottom-right-radius: $layout-table-radius;
+    & > .el-tabs {
+      & .el-tabs__header {
+        background-color: $layout-table-head-bg;
+      }
+    }
+    & .dialog-button {
+      top: ($layout-card-head-height/2)-10px;
+      right: ($layout-card-head-height/2)+20px;
+    }
+    & .eport-table-wrap {
+      border: none;
+      border-radius: $layout-table-radius;
+      & .table-header {
+        height: $layout-table-title-height;
+        line-height: $layout-table-title-height;
+        padding: $layout-table-title-padding;
+
+        background-color: $layout-table-title-bg;
+        border: 1px solid #ddd;
+        border-bottom: none;
+        color: $layout-table-title-font-color;
+        font-size: $layout-table-title-font-size;
+      }
+      & .has-gutter tr th {
+        font-weight: normal;
+        background-color: $layout-table-head-bg;
+        font-size: $layout-table-head-font-size;
+      }
+      & .table-footer {
+        border-bottom-left-radius: $layout-table-radius;
+        border-bottom-right-radius: $layout-table-radius;
+      }
+    }
+  }
+  & .el-form--label-top .el-form-item {
+    background-color: $layout-input-lable-top-bg;
+  }
+  & .el-card__body {
+    position: relative !important;
+    top: 0px !important;
+  }
+}
+
+.el-date-editor {
+  width: 100% !important;
+}
+.el-form {
+  margin: 0px;
+}
+.el-button-group {
+  margin-right: 3px;
+}
+.el-card {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+  & > .el-card__header {
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(191, 203, 217, 0.29) !important;
+    border: 1px solid #bfcbd9;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    margin: 0px;
+    padding: 0px;
+    color: #000 !important;
+    padding: 0 10px;
+    & > span {
+      color: #000;
+      font-size: 12px;
+    }
+    & > span:before {
+      content: "";
+      width: 2px;
+      height: 12px;
+      display: inline-block;
+      background-color: #20a0ff;
+      transform: translateY(2px);
+      margin-right: 4px;
+    }
+  }
+  & > .el-card__body {
+    margin: 0px !important;
+    padding: 10px;
+    border: 1px solid #bfcbd9 !important;
+    border-top: none !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    & .eport-table-wrap {
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0px !important;
+      & .el-table--border::after,
+      .el-table--group::after {
+        width: 0px;
+      }
+      & .el-table {
+        border: 1px solid #bfcbd9 !important;
+        width: 100%;
+        & td,
+        th.is-leaf {
+          border-bottom: 1px solid #bfcbd9;
+        }
+      }
+      & .table-footer {
+        border: 1px solid #bfcbd9 !important;
+        border-top: 0px !important;
+        border-radius: 0px !important;
+      }
+    }
+  }
+}
+.el-tabs {
+  box-shadow: none !important;
+}
+.full {
+  position: relative;
+  margin: 0px auto;
+  & > .el-card__body {
+    top: 30px !important;
+    position: absolute !important;
+    bottom: 0px;
+  }
+}
+
+.login-dialog {
+  padding: 15px;
+  & .el-alert {
+    margin: 0px 5px;
+    width: auto;
+  }
+  & .el-form {
+    margin: 20px 0px 0px 0px;
+    & .el-input,
+    & .el-input__inner {
+      height: 32px;
+    }
+    & .el-button {
+      height: 32px;
+      margin: 0px 5px;
+      width: 47% !important;
+    }
+  }
+}
+.hidcon {
+  & .el-tabs__content {
+    display: none;
+  }
+}
+.el-tabs__content {
+  border-right: 1px solid #e4e7ed;
+  border-bottom: 1px solid #e4e7ed;
+  border-left: 1px solid #e4e7ed;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+//版权按钮
+.version_btn {
+  color: $layout-menu-font-color;
+  text-align: center;
+  left: 0px;
+  bottom: 0px;
+  width: calc(100% - 1px);
+  font-size: 12px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0px;
+  background-color: $layout-menu-bg;
+  border-right: 1px solid #eee;
+  margin-right: 3px;
+  & .el-button {
+    background: initial;
+    color: $layout-menu-font-color;
+    border: none;
+    & i {
+      font-size: 24px;
+    }
+    &:hover {
+      background: initial;
+      color: $layout-menu-hover-font-color;
+      border: none;
+    }
+  }
+}
+//版权样式
+.popper_version {
+  & > p {
+    font-size: 12px;
+    &:nth-child(5) {
+      font-size: 12px;
+      background-color: #eee;
+      padding: 10px;
+    }
+    &:nth-child(6) {
+      font-size: 12px;
+    }
+  }
+}

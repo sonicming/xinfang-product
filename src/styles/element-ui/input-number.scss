@@ -1,0 +1,20 @@
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/common/var";
+
+@include b(input-number) {
+  @include m(compact) {
+    width: 100%;
+    line-height: #{$line-height - 2};
+
+    @include e((increase, decrease)) {
+      width: $--size-base + 6px;
+      font-size:   $--size-base;
+    }
+
+    .el-input__inner {
+      padding-left: #{$--input-small-height + 7};
+      padding-right: #{$--input-small-height + 7};
+    }
+  }
+
+}

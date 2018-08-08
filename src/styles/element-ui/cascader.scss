@@ -1,0 +1,36 @@
+@import "../../../node_modules/element-theme-chalk/src/common/var";
+@import "../../../node_modules/element-theme-chalk/src/mixins/mixins";
+@import "../../../node_modules/element-theme-chalk/src/input.scss";
+@import "../../../node_modules/element-theme-chalk/src/popper";
+
+@include b(cascader-menu) {
+  @include e(item) {
+    font-size: $--size-base;
+    padding:0 6px;
+    height: $line-height * 1.3;
+    line-height: $line-height * 1.3;
+    @include m(extensible) {
+      &:after {
+        font-size: $--size-base;
+      }
+    }
+  }
+
+}
+
+@include b(cascader) {
+  @include m(compact) {
+    width:100%;
+    font-size: $--size-base;
+    line-height: $line-height;
+    height: $line-height;
+  }
+  @include e(label) {
+    font-size: $--size-base;
+    line-height: $line-height;
+    height: $line-height;
+    padding: 0 6px;
+    padding-top:2px;
+  }
+
+}

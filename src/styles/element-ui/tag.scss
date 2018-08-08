@@ -1,0 +1,14 @@
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/common/var";
+
+@include b(tag) {
+  @include m(compact) {
+    height: 16px;
+    padding: 0 2px;
+    line-height: 14px;
+
+    .el-icon-close {
+      transform: scale(.8);
+    }
+  }
+}

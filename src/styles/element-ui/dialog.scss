@@ -1,0 +1,49 @@
+
+.el-dialog {
+  .dialog-button{
+    position:absolute;top:4px;right:35px;
+  }
+  border-radius: 6px;
+  &__header {
+    padding: 0 $margin;
+    background: $dialog-header-color;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px 4px 0 0 ;
+    line-height: $header-height;
+    height: $header-height;
+
+  }
+  &__title{
+    color:lighten( $dialog-header-color,90%);
+    font-size: $--size-base;
+  }
+  &__body {
+    padding:$margin;
+    border:1px solid $dialog-header-color;
+    line-height: unset;
+  }
+
+
+  &__headerbtn{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    height: $header-height - 8;
+    width:$header-height  - 8;
+    font-size:14px;
+    &:hover{
+      background-color:lighten( $dialog-header-color,100%);
+      color:lighten($card-header-color,100%);
+    }
+  }
+}

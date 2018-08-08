@@ -1,0 +1,45 @@
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/common/var";
+
+@include b(form) {
+  margin:12px 0 0 0;
+  @include m(inline) {
+    .el-form-item__content {
+      min-width:12em;
+    }
+  }
+  @include m(label-top){
+      .el-form-item {
+        background: #c4dec4;
+        border-radius: 4px;
+      }
+  }
+}
+
+@include b(form-item) {
+  @include m(compact) {
+    &.el-form-item {
+      margin:3px 5px 12px 5px;
+    }
+    .el-input--suffix .el-input__inner{
+      padding-right: 0px;
+    }
+
+    .el-form-item__label {
+      color: $--color-text-regular;
+      line-height: $line-height;
+      height: $line-height ;
+      font-size: $--size-base;
+      padding: 0 10px 0 3px;
+    }
+    .el-form-item__content {
+      line-height: $line-height;
+      flex:1;
+      vertical-align: middle;
+    }
+    .el-form-item__error {
+      padding-top: 1px;
+    }
+  }
+
+}

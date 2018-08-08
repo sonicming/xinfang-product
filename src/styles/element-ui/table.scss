@@ -1,0 +1,109 @@
+@import '~element-ui/packages/theme-chalk/src/mixins/mixins';
+@import '~element-ui/packages/theme-chalk/src/common/var';
+
+@include b(table) {
+  @include m(compact) {
+    font-size: $--size-base;
+    thead {
+      th {
+        background: lighten($table-header-color, 40%);
+      }
+    }
+    th,
+    td {
+      cursor: default;
+      padding: 1px 0;
+      color: $--color-text-regular;
+      height: $line-height;
+      line-height: $line-height;
+    }
+    tr.current-row > td {
+      background-color: $--table-current-row-background !important;
+    }
+    .caret-wrapper {
+      height: $line-height;
+      line-height: $line-height;
+    }
+    .sort-caret {
+      &.ascending {
+        top: -1px;
+      }
+      &.descending {
+        bottom: 0px;
+      }
+    }
+    .el-table__expanded-cell[class*='cell'] {
+      padding: 5px;
+    }
+  }
+  @include e(expanded-cell) {
+    // 纯属为了增加权重
+    &[class*='cell'] {
+      padding: 5px;
+    }
+  }
+}
+
+.eport-table-wrap {
+  box-shadow: 0 2px 12px 0 #0000001a;
+  border: 1px solid $table-header-color;
+  .table-header {
+    line-height: $header-height;
+    height: $header-height;
+    background-color: $table-header-color;
+    color: lighten($table-header-color, 80%);
+    &__title {
+      float: left;
+      padding-left: $margin;
+    }
+    &__buttons {
+      float: right;
+      padding-right: $margin;
+    }
+  }
+
+  .table-footer {
+    border: 1px solid #dfe6ec;
+    border-top: 0;
+    height: $line-height + $margin * 2;
+    line-height: $line-height + $margin * 2;
+    .el-pagination {
+      float: right;
+      font-weight: 500;
+      button,
+      span:not([class*='suffix']) {
+        height: $line-height;
+        line-height: $line-height;
+        min-width: 20px;
+        margin: 0;
+        padding: 0;
+      }
+      .number {
+        min-width: 22px;
+      }
+      .el-input__inner {
+        height: $line-height;
+        line-height: $line-height;
+        background-color: #fff !important;
+      }
+      .el-pager {
+        height: $line-height;
+        line-height: $line-height;
+        li {
+          padding: 0 1px;
+          height: $line-height;
+          line-height: $line-height;
+        }
+      }
+    }
+    .table-actions {
+      display: inline-block;
+      height: $line-height;
+      line-height: $line-height;
+      margin-left: $margin;
+      .el-button {
+        padding: $margin;
+      }
+    }
+  }
+}

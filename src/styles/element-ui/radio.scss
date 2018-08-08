@@ -1,0 +1,27 @@
+@import "../../../node_modules/element-theme-chalk/src/mixins/mixins";
+@import "../../../node_modules/element-theme-chalk/src/mixins/utils";
+@import "../../../node_modules/element-theme-chalk/src/mixins/button";
+@import "../../../node_modules/element-theme-chalk/src/common/var";
+
+@include b(radio) {
+  .el-radio__label {
+    font-size: $--size-base;
+  }
+}
+@include b(form-item) {
+  @include m(compact) {
+    @include b(radio) {
+      .el-radio__inner {
+        width:  $--size-base;
+        height:  $--size-base;
+      }
+      .el-radio__label {
+        font-size: $--size-base;
+        padding-left: $margin;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,11 @@
+@import "../../../node_modules/element-theme-chalk/src/mixins/mixins";
+@import "../../../node_modules/element-theme-chalk/src/common/var";
+
+@include b(select-dropdown) {
+  @include e(item) {
+    & span {
+      height: $--select-option-height !important;
+      line-height: $--select-option-height !important;
+    }
+  }
+}

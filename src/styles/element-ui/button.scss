@@ -1,0 +1,14 @@
+
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/mixins/button";
+
+
+@include b(button) {
+  & + .el-button {
+    margin-left: $margin;
+  }
+
+  @include m(compact) {
+    @include button-size($margin, $margin, $--size-base, $margin);
+  }
+}
