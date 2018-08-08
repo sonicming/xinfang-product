@@ -20,11 +20,11 @@ router.beforeEach((to, from, next) => {
   }
 
   //  没有登录,载入非login页面,转到login
-  let logined = window.localStorage.getItem(config.loginToken);
-  if (!logined && to.path !== "/login") {
-    //   next({ path: '/login' })
-    // return
-  }
+  // let logined = window.localStorage.getItem(config.loginToken);
+  // if (!logined && to.path !== "/login") {
+  //   //   next({ path: '/login' })
+  //   // return
+  // }
 
   //通过路由拦截进行tabs分页信息的获取
   if (to.path !== "/login" && to.path !== "/home") {

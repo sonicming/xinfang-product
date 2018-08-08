@@ -3,7 +3,7 @@ function envOr(a, b) {
 }
 let ajaxUrl = envOr("/api", "");
 let config = {
-  title: "企业云通关服务平台",
+  title: "信访产品node",
   //是否使用后台数据进行菜单的生成
   isAPIMenu: false,
   context: {

@@ -19,11 +19,6 @@
               </template>
             </el-input>
           </el-form-item>
-          <el-form-item prop="captcha" v-if="sysLogin.needCaptcha">
-            <el-input type="text" v-model="loginForm.captcha" placeholder="验证码" size="large" :disabled="sysLogin.disLogin">
-              <img slot="prepend" class="captcha" @click="changeImg" :src="captchaUrl">
-            </el-input>
-          </el-form-item>
           <el-button class="btnSubmit" type="primary" @click.native.prevent="handleSubmit" :loading="sysLogin.loading" :disabled="sysLogin.disLogin">登录</el-button>
         </div>
       </el-form>
@@ -44,16 +39,13 @@ export default {
       logining: false,
       needCaptcha: false,
       disLogin: false,
-      captchaUrl: config.captchaUrl,
       loginForm: {
         userid: "",
-        passwd: "",
-        captcha: ""
+        passwd: ""
       },
       rules: {
         account: [{ required: true, message: "请输入账号", trigger: "blur" }],
-        checkPass: [{ required: true, message: "请输入密码", trigger: "blur" }],
-        captcha: [{ required: true, message: "验证码不能为空" }]
+        checkPass: [{ required: true, message: "请输入密码", trigger: "blur" }]
       }
     };
   },
@@ -61,24 +53,22 @@ export default {
     this.$store.dispatch("base/logck");
   },
   methods: {
-    changeImg() {
-      this.captchaUrl = `${config.captchaUrl}?_dc=${new Date().getTime()}`;
-    },
     handleSubmit(ev) {
       this.$refs.loginForm.validate(valid => {
         if (!valid) {
           return false;
         }
-        this.logining = true;
-        this.$store
-          .dispatch("base/login", this.loginForm)
-          .then(() => {
-            this.$router.push("/");
-          })
-          .catch(() => {
-            this.logining = false;
-            this.$refs.captcha.changeImg();
-          });
+        this.logining = true; //登陆成功
+        this.$router.push("/");
+        // this.$store
+        //   .dispatch("base/login", this.loginForm)
+        //   .then(() => {
+        //     this.$router.push("/");
+        //   })
+        //   .catch(() => {
+        //     this.logining = false;
+        //     this.$refs.captcha.changeImg();
+        //   });
       });
     }
   }
